@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%')
 			size += _vprintf(lst, format[++i]);
 		else
 			size += _putchar(format[i]);
