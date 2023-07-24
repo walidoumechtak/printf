@@ -15,7 +15,13 @@ int	_vprintf(va_list lst, char c)
 		return (_putchar(va_arg(lst, int)));
 	else if (c == 's')
 		return (_putstr(va_arg(lst, char *)));
+	else if (c == ' ')
+		exit (-1);
 	else
-		return (_putchar(c));
+	{
+		_putchar('%');
+		_putchar(c);
+		return (0);
+	}
 	return (0);
 }
