@@ -18,11 +18,12 @@ int _printf(const char *format, ...)
 	size = 0;
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
 			size += _vprintf(lst, format[++i]);
 		else
 			size += _putchar(format[i]);
 		i++;
 	}
+	va_end(lst);
 	return (size);
 }
