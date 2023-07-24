@@ -22,15 +22,14 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-		{
-			
+		{	
 			ret = _vprintf(lst, format[++i]);
 			if (ret == -1)
 				return (-1);
 			size += ret;
 		}
 		else
-			size += _putchar(format[i]);
+			size += _putchar(format[i])
 		i++;
 	}
 	va_end(lst);
