@@ -17,7 +17,7 @@ int	_vprintf(va_list lst, char c)
 		return (_putstr(va_arg(lst, char *)));
 	else if (c == ' ')
 		return (-1);
-	else
+	else if (c != ' ')
 	{
 		_putchar('%');
 		_putchar(c);
