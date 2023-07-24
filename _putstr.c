@@ -12,6 +12,10 @@ int	_putstr(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+	}
 	while (str[i])
 	{
 		_putchar(str[i]);
