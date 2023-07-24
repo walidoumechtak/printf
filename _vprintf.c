@@ -15,6 +15,8 @@ int	_vprintf(va_list lst, char c)
 		return (_putchar(va_arg(lst, int)));
 	else if (c == 's')
 		return (_putstr(va_arg(lst, char *)));
+else if (c == 'd' || c == 'i')
+return (_putnbr(va_arg(lst, int)));
 	else if (c == ' ')
 		return (-1);
 	else if (c != ' ')
