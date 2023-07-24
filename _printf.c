@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	va_list lst;
 	int	i;
 	int	size;
+	int	ret;
 
 	va_start(lst, format);
 	i = 0;
@@ -21,7 +22,13 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			size += _vprintf(lst, format[++i]);
+		{
+			
+			ret = _vprintf(lst, format[++i]);
+			if (ret == -1)
+				return (-1);
+			size += ret;
+		}
 		else
 			size += _putchar(format[i]);
 		i++;

@@ -16,7 +16,7 @@ int	_vprintf(va_list lst, char c)
 	else if (c == 's')
 		return (_putstr(va_arg(lst, char *)));
 	else if (c == ' ')
-		exit (-1);
+		return (-1);
 	else
 	{
 		_putchar('%');
