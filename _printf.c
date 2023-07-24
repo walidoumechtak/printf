@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			size += ret;
 		}
 		else
-			size += _putchar(format[i])
+			size += _putchar(format[i]);
 		i++;
 	}
 	va_end(lst);
