@@ -13,4 +13,5 @@ int	_putchar(char c);
 int	_vprintf(va_list lst, char c);
 int	_putstr(char *str);
 int     _putnbr(int n);
+
 #endif /* _MAIN_H_ */
