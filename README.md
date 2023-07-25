@@ -39,10 +39,10 @@ The custom `printf` function supports the following format specifiers:
    char* str = "Hello, World!";
    char ch = 'A';
 
-   printf("Integer: %d\n", num);
-   printf("String: %s\n", str);
-   printf("Character: %c\n", ch);
-   printf("Percentage: %%\n");
+   _printf("Integer: %d\n", num);
+   _printf("String: %s\n", str);
+   _printf("Character: %c\n", ch);
+   _printf("Percentage: %%\n");
    ```
 
 4. Compile your C program with the custom `printf` implementation:
